@@ -21,11 +21,17 @@ module.exports = {
 
   deploy : {
     production : {
+      // 远程服务器用户名
       user : 'root',
+      // 远程服务器IP地址
       host : '139.196.90.36',
+      // git 分支
       ref  : 'origin/master',
+      // git 地址
       repo: 'git@github.com:moonljr/pm2TestPro.git',
+      // 远程服务器存放文件地址
       path : '/root/moon/app/todo',
+      // 发布执行的命令
       'post-deploy' : 'git pull && npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
