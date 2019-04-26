@@ -25,10 +25,12 @@ module.exports = {
       user : 'root',
       // 远程服务器IP地址
       host : '139.196.90.36',
+      port: 22,
       // git 分支
       ref  : 'origin/master',
       // git 地址
       repo: 'https://github.com/moonljr/pm2TestPro.git',
+      'pre-deploy': 'git fetch --all',
       // 远程服务器存放文件地址
       path : '/root/moon/app',
       // 发布执行的命令
