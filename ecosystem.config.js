@@ -34,7 +34,7 @@ module.exports = {
       // 远程服务器存放文件地址
       path : '/root/moon/app',
       // 发布执行的命令
-      'post-deploy' : 'git pull && npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
