@@ -28,9 +28,9 @@ module.exports = {
       // git 分支
       ref  : 'origin/master',
       // git 地址
-      repo: 'git@github.com:moonljr/pm2TestPro.git',
+      repo: 'https://github.com/moonljr/pm2TestPro.git',
       // 远程服务器存放文件地址
-      path : '/root/moon/app/todo',
+      path : '/root/moon/app',
       // 发布执行的命令
       'post-deploy' : 'git pull && npm install && pm2 reload ecosystem.config.js --env production'
     }
