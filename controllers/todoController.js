@@ -9,6 +9,26 @@ let todoSchema = new mongoose.Schema({
 })
 let todo = mongoose.model('todo', todoSchema)
 module.exports = function (app, urlencodedParser, jsonParser) {
+  app.get('/todoList', function (req, res) {
+    todo.find({}, (err, data)=> {
+      if(err) throw err;
+      res.send({
+        status: 1,
+        data,
+        errMsg: 'getTodoList'
+      })
+    })
+  })
+    app.post('/todoList', function (req, res) {
+      todo.find({}, (err, data) => {
+        if (err) throw err;
+        res.send({
+          status: 1,
+          data,
+          errMsg: 'getTodoList'
+        })
+      })
+    })
   app.get('/todo', function (req, res) {
     todo.find({}, (err, data) => {
       if (err) throw err;
